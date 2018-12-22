@@ -1,0 +1,19 @@
+#:kivy 1.0
+#:import kivy kivy
+
+<PBPicture>:
+    Image:
+        id: image
+        source: root.source
+        
+        # Create initial image to be 400 pixels width
+        size: 800, 600 / self.image_ratio
+
+        # Image border
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            BorderImage:
+                border: (100, 0, 0, 0)
+                size: (560, 90)
+                pos: (self.x + 120, self.y - 70)
